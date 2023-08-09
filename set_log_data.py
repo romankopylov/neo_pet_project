@@ -12,6 +12,8 @@ def set_message_to_log(status, value):
             log_query = "INSERT INTO logs.log_data (date_and_time, status, description) VALUES (CURRENT_TIMESTAMP, 'ERROR', %s)"
         case 'finish':
             log_query = "INSERT INTO logs.log_data (date_and_time, status, description) VALUES (CURRENT_TIMESTAMP, 'FINISH_LOADING', %s)"
+        case 'inform':
+            log_query = "INSERT INTO logs.log_data (date_and_time, status, description) VALUES (CURRENT_TIMESTAMP, 'INFORM_MESS', %s)"
         case _:
             return 0
             
